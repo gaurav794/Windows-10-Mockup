@@ -1,27 +1,18 @@
 # Windows10Mock
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
+This project was developed with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
-## Development server
+Accomplishments, Responsibilities and Tasks:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+•	Developed web application which is a replica of the starting windows process from booting to the desktop stage to give user windows look and feel the experience
 
-## Code scaffolding
+•	Displayed content using HTML5, the transition between pages, loading animation, perfectly aligned content and better user experience achieved by using CSS, Bootstrap and ngBootstrap
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+•	Implemented utilities such as lock screen, picture password sign-in option, selection of desktop icons, refresh function and context menu on desktop icons by using Typescript which increased overall user experience by 40%
 
-## Build
+•	Followed best coding practices while developing the application for better performance
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+•	Deployed and hosted the application to Microsoft Azure to provide windows experience on the web to users which allowed me to understand the deployment process
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
