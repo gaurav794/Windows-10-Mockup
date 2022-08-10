@@ -1,0 +1,261 @@
+:root{
+  /*Loading position*/
+  --viewport-top: 100vh;
+
+}
+
+div,
+img svg {
+  user-select: none;
+}
+div:hover {
+  cursor: default;
+}
+
+.click-circle {
+  left: 0;
+  top: 0;
+  height: 30px;
+  width: 30px;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 1;
+  border: 1px solid rgba(146, 100, 15, 0.6);
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fade 0.25s ease-in forwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+.profile,
+.profile-font,
+.show,
+.end {
+  animation: positions 0.8s ease forwards;
+}
+
+@keyframes positions {
+  0% {
+    opacity: 0;
+    top: 50px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+.changeToDesktop{
+  animation: fadeToDesktop 6s ease forwards;
+}
+
+@keyframes fadeToDesktop {
+  0%{
+    opacity: 1;
+  }
+  97%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0.2;
+  }
+}
+
+.options {
+  height: 100vh;
+  background: rgb(146, 100, 15);
+  width: 311px;
+  padding: 45px;
+}
+
+
+.content {
+  width: 100%;
+}
+
+.picture {
+  height: 100vh;
+  background: black;
+  width: 100%;
+}
+
+.picture img {
+  animation: zoom-effect 0.2s ease-out forwards;
+}
+
+@keyframes zoom-effect {
+  0% {
+    opacity: 0.5;
+    padding: 30px 0;
+    height: 97vh;
+    width: 1225px;
+  }
+  100% {
+    margin: 12px 0 10px 0;
+    height: 97vh;
+    width: 100%;
+  }
+}
+
+.profile {
+  height: 200px;
+  width: 200px;
+  margin-bottom: 5px;
+}
+
+.profile img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.profile-font {
+  color: white;
+  font-size: 21px;
+  margin-bottom: 5px;
+}
+
+.show {
+  color: white;
+  font-size: 14px;
+}
+
+.show:hover {
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.hidden {
+  color: white;
+  animation: appear 0.1s ease forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hidden .font {
+  font-size: 21px;
+  margin-top: 4px;
+}
+
+.controls {
+  color: white;
+  fill: white;
+  padding: 6px;
+}
+.controls:hover {
+  cursor: default;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.controls.eng {
+  font-size: 13px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  align-self: center;
+}
+
+.start-over-button {
+  box-sizing: border-box;
+  bottom: 100%;
+  left: 30%;
+  padding: 5px 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.start-over-button:hover {
+  outline: 3px solid rgba(255, 255, 255, 0.5);
+  outline-offset: -3px;
+  cursor: default;
+}
+
+svg {
+  height: 25px;
+  width: 25px;
+}
+
+/*Loading css*/
+
+.wrapper {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  top: 39%;
+  left: -25%;
+  transform: rotate(150deg);
+}
+
+.loading {
+  width: 1px;
+  height: 30px;
+  position: absolute;
+  animation: rotate 4.5s linear infinite;
+}
+.loading .dot {
+  background: white;
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+}
+
+@keyframes rotate {
+  5% {
+    transform: rotate(30deg);
+  }
+  30% {
+    transform: rotate(270deg);
+  }
+  40% {
+    transform: rotate(450deg);
+    opacity: 1;
+  }
+  75% {
+    transform: rotate(720deg);
+    opacity: 1;
+  }
+  76% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(270deg);
+    opacity: 0;
+  }
+}
+
+.loading:nth-child(1) {
+  animation-delay: 0s;
+}
+.loading:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.loading:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.loading:nth-child(4) {
+  animation-delay: 0.45s;
+}
+.loading:nth-child(5) {
+  animation-delay: 0.6s;
+}
+
+/*Loading ends*/

@@ -1,0 +1,25 @@
+:root {
+  /*Colors*/
+  /*Lockscreen*/
+  --lockscreen-link: rgba(0, 0, 0, 0.1);
+  --lockscreen-link-hover: rgba(0, 0, 0, 0.4);
+  --lockscreen-text: rgb(255, 255, 255);
+  --lockscrren-credits-text: rgb(153, 153, 153);
+  /*Desktop*/
+  --desktop-icon-hover: rgba(0, 50, 255, 0.2);
+  --desktop-icon-focused: rgba(0, 50, 255, 0.3);
+  /*Taskbar*/
+  --taskbar: rgba(240, 227, 201);
+  --taskbar-icon-hover: rgba(248, 240, 224);
+  --taskbar-start-hover: rgba(217, 178, 108);
+  /*Size*/
+  --port-height: 734px;
+  --port-width: 1536px;
+}
+
+div,img svg {
+  user-select: none;
+}
+div:hover {
+  cursor: default;
+}

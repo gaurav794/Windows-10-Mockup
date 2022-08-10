@@ -1,0 +1,252 @@
+div,img svg {
+  user-select: none;
+}
+div:hover {
+  cursor: default;
+}
+
+.refresh{
+  opacity: 0;
+}
+
+.no-refresh{
+  opacity: 1;
+}
+
+
+.wallpaper {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+.background {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.taskbar {
+  background: rgba(240, 227, 201);
+  height: 30px;
+  width: 100%;
+}
+
+.win-logo {
+  margin-right: 4px;
+}
+
+svg.start-logo:hover {
+  fill: rgba(217, 178, 108);
+}
+
+svg {
+  height: 30px;
+  width: 30px;
+  fill: black;
+  padding: 0 7px;
+  margin: 0 3px;
+}
+.features > svg {
+  height: 30px;
+  width: 30px;
+  fill: black;
+  padding: 0 7px;
+  margin: 0 0px;
+}
+
+.features > svg.battery {
+  padding: 0px;
+  margin: 0px;
+}
+
+/*Right Click Menu for desktop icons starts*/
+
+.context-menu-icon {
+  left: 0;
+  top: 0;
+  width: 300px;
+  background: rgb(229, 229, 229);
+  color: black;
+  font-size: 11px;
+  padding: 5px 0px;
+  margin-left: 5px;
+}
+
+.context-menu-icon p {
+  margin: 0;
+  margin-bottom: 2px;
+}
+.context-menu-w {
+  width: 298px;
+  padding-left: 5px;
+}
+.context-menu-w:hover {
+  background: white;
+}
+
+/*Right Click Menu for desktop icons starts*/
+
+/*Right Click Menu starts*/
+.context-menu {
+  left: 0;
+  top: 0;
+  width: 210px;
+  height: 280px;
+  background: rgb(229, 229, 229);
+  color: black;
+  font-size: 11px;
+  padding: 5px 0px;
+  margin-left: 5px;
+}
+
+.context-menu p {
+  margin: 0;
+}
+
+svg.menu {
+  height: 15px;
+  width: 25px;
+  fill: black;
+  transform: rotate(-90deg);
+}
+
+.menu-w {
+  width: 208px;
+  padding-left: 5px;
+}
+.menu-leftp {
+  padding-left: 25px;
+}
+
+.menu-w:hover {
+  background-color: white;
+}
+
+.menu-lp {
+  padding-left: 20px;
+}
+
+.menu-img {
+  height: 12px;
+  width: 12px;
+  margin-top: 3px;
+  margin-right: 8px;
+  pointer-events: all;
+}
+
+/*Right Click Menu ends*/
+
+div.default-apps:hover {
+  background: rgba(248, 240, 224);
+}
+
+div.features:hover {
+  background: rgba(248, 240, 224);
+}
+
+.installed-program > div img {
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+  margin: 0 7px;
+}
+
+.installed-program > div div.items:hover {
+  background: rgba(248, 240, 224);
+}
+
+.current-time {
+  padding: 0px 5px;
+  margin: 5px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.lang {
+  padding: 0px 1px;
+  margin: 5px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.notification {
+  padding: 0 5px;
+  margin-right: 5px;
+}
+.show-desktop {
+  height: 30px;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  padding-right: 5px;
+}
+
+.ng-template {
+  font-size: 12px;
+}
+
+.desktop {
+  margin-top: 40px;
+}
+
+.icons {
+  height: 92vh;
+}
+.icons .icon {
+  width: 80px;
+  height: 70px;
+  margin-bottom: 25px;
+}
+
+/*Show hiddens icons starts*/
+
+.dropdown-menu {
+  padding: 0;
+  background: rgb(229, 229, 229);
+}
+.row {
+  margin: 0 10px;
+}
+.icon-container {
+  height: 40px;
+  width: 40px;
+  padding: 10px;
+}
+.icon-container:hover {
+  background: rgb(255, 255, 255);
+}
+.icon-container > img.hidden-icon {
+  padding: 0;
+  pointer-events: none;
+}
+/*Show hiddens icons ends*/
+
+div.icon:hover {
+  background: rgba(0, 50, 255, 0.3);
+}
+div.icon:focus:hover {
+  background: rgba(0, 50, 255, 0.3);
+}
+
+div.icon.isClicked,
+div.icon.next,
+div.icon:focus {
+  background: rgba(0, 50, 255, 0.2);
+}
+
+div.icon.isClicked > figure,
+div.icon.next > figure {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+figure figcaption {
+  font-size: 11px;
+  width: 90px;
+  padding: 0 4px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
+  color: white;
+}
+figure > img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 4px;
+}

@@ -1,0 +1,17 @@
+{
+  "hosting": [
+    {
+      "app": {
+        "project": "win10-mock",
+        "target": "build",
+        "configuration": "production",
+        "path": "dist/win10-mock"
+      },
+      "azureHosting": {
+        "subscription": "81b1bc1b-9093-4c82-80b3-ad2d89f3236e",
+        "resourceGroupName": "win10-mock-static-deploy2",
+        "account": "win10mockstatic"
+      }
+    }
+  ]
+}

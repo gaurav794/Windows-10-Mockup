@@ -1,0 +1,687 @@
+<div class="position-relative">
+  <div
+    *ngIf="isRightClicked"
+    class="context-menu dropdown-menu d-block"
+    [style]="coordinates"
+    (contextmenu)="onRightClickContextMenu($event)"
+    (click)="onClickDesktopOrFocusLost()"
+  >
+    <div class="d-flex flex-column align-items-start">
+      <div class="d-flex justify-content-between menu-w">
+        <p class="menu-lp">View</p>
+        <svg
+          class="menu"
+          width="524px"
+          height="524px"
+          viewBox="0 -6 524 524"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M64 191L98 157 262 320 426 157 460 191 262 387 64 191Z" />
+        </svg>
+      </div>
+      <div class="d-flex justify-content-between menu-w">
+        <p class="menu-lp">Sort by</p>
+        <svg
+          class="menu"
+          width="524px"
+          height="524px"
+          viewBox="0 -6 524 524"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M64 191L98 157 262 320 426 157 460 191 262 387 64 191Z" />
+        </svg>
+      </div>
+      <p class="menu-w menu-leftp" (click)="onRefreshClick()">Refresh</p>
+    </div>
+    <div class="dropdown-divider m-1"></div>
+    <div class="d-flex flex-column menu-leftp">
+      <p class="text-muted">Paste</p>
+      <p class="text-muted">Paste shortcut</p>
+    </div>
+    <div class="d-flex justify-content-between menu-w menu-leftp">
+      <p>Undo Copy</p>
+      <p style="margin-right: 15px">Ctrl+Z</p>
+    </div>
+    <div class="d-flex flex-column">
+      <div class="d-flex menu-w">
+        <img
+          class="menu-img"
+          src="../../../assets/right-click/git.png"
+          alt="Git Bash Application"
+        />
+        <p>Git GUI Here</p>
+      </div>
+      <div class="d-flex menu-w">
+        <img
+          class="menu-img"
+          src="../../../assets/right-click/git.png"
+          alt="Git Bash Application"
+        />
+        <p>Git Bash Here</p>
+      </div>
+      <div class="d-flex menu-w">
+        <img
+          class="menu-img"
+          src="../../../assets/taskbar/vs-code.png"
+          alt="Microsoft Visual Code"
+        />
+        <p>Open with Code</p>
+      </div>
+    </div>
+    <div class="dropdown-divider m-1"></div>
+    <div class="d-flex flex-column">
+      <div class="d-flex menu-w">
+        <img
+          class="menu-img"
+          src="../../../assets/taskbar/dropdowns/intel-graphics.png"
+          alt="Intel Graphics Settings"
+        />
+        <p>Intel Graphics Settings</p>
+      </div>
+      <div class="d-flex menu-w">
+        <img
+          class="menu-img"
+          src="../../../assets/taskbar/dropdowns/nvidia.png"
+          alt="NVIDIA Controls Panel"
+        />
+        <p>NVIDIA Control Panel</p>
+      </div>
+    </div>
+    <div class="dropdown-divider m-1"></div>
+    <div class="d-flex justify-content-between menu-w">
+      <p class="menu-lp">New</p>
+      <svg
+        class="menu"
+        width="524px"
+        height="524px"
+        viewBox="0 -6 524 524"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M64 191L98 157 262 320 426 157 460 191 262 387 64 191Z" />
+      </svg>
+    </div>
+    <div class="dropdown-divider m-1"></div>
+    <div class="d-flex flex-column">
+      <div class="d-flex menu-w">
+        <img
+          class="menu-img"
+          src="../../../assets/right-click/display-settings.png"
+          alt="Display Settings"
+        />
+        <p>Display Settings</p>
+      </div>
+      <div class="d-flex menu-w">
+        <img
+          class="menu-img"
+          src="../../../assets/right-click/personalize.png"
+          alt="NVIDIA Controls Panel"
+        />
+        <p>Personalize</p>
+      </div>
+    </div>
+  </div>
+  <div
+    *ngIf="isRightClickOnIcons"
+    class="context-menu-icon dropdown-menu d-block"
+    [style]="coordinates"
+    (contextmenu)="onRightClickContextMenu($event)"
+    (click)="onClickDesktopOrFocusLost()"
+  >
+    <div class="d-flex flex-column align-items-start">
+      <p class="menu-leftp context-menu-w">Open</p>
+      <p class="menu-leftp context-menu-w">Open file location</p>
+    </div>
+    <div class="d-flex flex-column">
+      <div class="d-flex context-menu-w">
+        <img
+          class="menu-img"
+          src="../../../assets/right-click/winrar.png"
+          alt="Winrar Application"
+        />
+        <p>Add to archive...</p>
+      </div>
+      <div class="d-flex context-menu-w">
+        <img
+          class="menu-img"
+          src="../../../assets/right-click/winrar.png"
+          alt="Winrar Application"
+        />
+        <p>Compress and email...</p>
+      </div>
+      <div class="d-flex context-menu-w">
+        <img
+          class="menu-img"
+          src="../../../assets/right-click/administrator.png"
+          alt="Run as administrator"
+        />
+        <p>Run as administrator</p>
+      </div>
+      <div class="d-flex context-menu-w">
+        <img
+          class="menu-img"
+          src="../../../assets/taskbar/intellij.png"
+          alt="Open IntelliJ IDEA"
+        />
+        <p>IntelliJ IDEA</p>
+      </div>
+      <div class="d-flex context-menu-w">
+        <img
+          class="menu-img"
+          src="../../../assets/taskbar/vs-code.png"
+          alt="Code"
+        />
+        <p>Open with Code</p>
+      </div>
+    </div>
+    <div class="d-flex flex-column align-items-start">
+      <p class="menu-leftp context-menu-w">Troubleshoot compatibility</p>
+      <p class="menu-leftp context-menu-w">Pin to Start</p>
+    </div>
+    <div class="d-flex flex-column">
+      <div class="d-flex context-menu-w">
+        <img
+          class="menu-img"
+          src="../../../assets/desktop/notepad++.png"
+          alt="Edit with Notepad++ Application"
+        />
+        <p>Notepad++</p>
+      </div>
+      <div class="d-flex context-menu-w">
+        <img
+          class="menu-img"
+          src="../../../assets/right-click/defender.png"
+          alt="Scan for virus"
+        />
+        <p>Scan with Microsoft Defender...</p>
+      </div>
+    </div>
+    <div class="d-flex flex-column align-items-start">
+      <p class="menu-leftp context-menu-w">Pin to taskbar</p>
+    </div>
+    <div class="dropdown-divider m-1"></div>
+    <div class="d-flex flex-column align-items-start">
+      <p class="menu-leftp context-menu-w">Restore previous versions</p>
+    </div>
+    <div class="dropdown-divider m-1"></div>
+    <div class="d-flex justify-content-between context-menu-w">
+      <p class="menu-lp">Send to</p>
+      <svg
+        class="menu"
+        width="524px"
+        height="524px"
+        viewBox="0 -6 524 524"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M64 191L98 157 262 320 426 157 460 191 262 387 64 191Z" />
+      </svg>
+    </div>
+    <div class="dropdown-divider m-1"></div>
+    <div class="d-flex flex-column align-items-start">
+      <p class="menu-leftp context-menu-w">Cut</p>
+      <p class="menu-leftp context-menu-w">Copy</p>
+    </div>
+    <div class="dropdown-divider m-1"></div>
+    <div class="d-flex flex-column align-items-start">
+      <p class="menu-leftp context-menu-w">Create shortcut</p>
+      <p class="menu-leftp context-menu-w">Delete</p>
+      <p class="menu-leftp context-menu-w">Rename</p>
+    </div>
+    <div class="dropdown-divider m-1"></div>
+    <div class="d-flex flex-column align-items-start">
+      <p class="menu-leftp context-menu-w">Properties</p>
+    </div>
+  </div>
+  <div class="taskbar position-absolute">
+    <div class="d-flex justify-content-between">
+      <div class="start d-flex">
+        <div class="win-logo">
+          <div class="d-flex justify-content-start">
+            <div class="default-apps" placement="bottom" ngbTooltip="Start">
+              <svg
+                class="start-logo"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 1000 1000"
+                enable-background="new 0 0 1000 1000"
+                xml:space="preserve"
+              >
+                <metadata>
+                  Svg Vector Icons : http://www.onlinewebfonts.com/icon
+                </metadata>
+                <g>
+                  <path
+                    d="M10,473h395.4V94.6L10,151.9V473z M459.5,86.8V473H990V10L459.5,86.8z M10,848.1l395.4,57.3V527.1H10V848.1z M459.5,913.2L990,990v-463H459.5V913.2z"
+                  />
+                </g>
+              </svg>
+            </div>
+            <div class="default-apps" placement="bottom" ngbTooltip="Search">
+              <svg
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 1000 1000"
+                enable-background="new 0 0 1000 1000"
+                xml:space="preserve"
+              >
+                <metadata>
+                  Svg Vector Icons : http://www.onlinewebfonts.com/icon
+                </metadata>
+                <g>
+                  <g>
+                    <g id="magnifying_glass">
+                      <g>
+                        <path
+                          d="M890.5,109.6c-132.7-132.9-347.8-132.9-480.6,0C286.3,233.4,278,428.7,384.6,562.3L10,937.5l52.5,52.6l374.4-374.9c133.5,108,329.5,99.9,453.5-24.3C1023.2,458,1023.2,242.5,890.5,109.6z M842.9,543.2c-106.5,106.6-279.1,106.6-385.6,0c-106.5-106.6-106.5-279.5,0-386.1c106.5-106.6,279.1-106.6,385.6,0S949.4,436.6,842.9,543.2z"
+                        />
+                      </g>
+                    </g>
+                  </g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                </g>
+              </svg>
+            </div>
+            <div
+              class="default-apps"
+              placement="bottom"
+              ngbTooltip="Talk to Cortona"
+            >
+              <svg
+                class="cortona"
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 29.107 29.107"
+                style="enable-background: new 0 0 29.107 29.107"
+                xml:space="preserve"
+              >
+                <g>
+                  <g id="c149_moon">
+                    <path
+                      id="_x3C_Compound_Path_x3E__7_"
+                      d="M14.558,2.079c6.877,0,12.471,5.597,12.471,12.473c0,6.877-5.594,12.476-12.471,12.476
+			c-6.879,0-12.478-5.599-12.478-12.476C2.08,7.676,7.679,2.079,14.558,2.079 M14.558,0C6.563,0,0,6.562,0,14.552
+			c0,7.995,6.563,14.555,14.558,14.555s14.549-6.56,14.549-14.555C29.106,6.562,22.552,0,14.558,0L14.558,0z"
+                    />
+                  </g>
+                  <g id="Capa_1_226_"></g>
+                </g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+              </svg>
+            </div>
+            <div class="default-apps" placement="bottom" ngbTooltip="Task View">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                data-name="Layer 1"
+                viewBox="0 0 64 64"
+              >
+                <rect
+                  width="40"
+                  height="24"
+                  x="2"
+                  y="20"
+                  fill="none"
+                  stroke="#010101"
+                  stroke-miterlimit="10"
+                  stroke-width="4"
+                />
+                <polyline
+                  fill="none"
+                  stroke="#010101"
+                  stroke-miterlimit="10"
+                  stroke-width="4"
+                  points="2 2 2 12 42 12 42 2"
+                />
+                <polyline
+                  fill="none"
+                  stroke="#010101"
+                  stroke-miterlimit="10"
+                  stroke-width="4"
+                  points="2 62 2 52 42 52 42 62"
+                />
+                <line
+                  x1="58"
+                  x2="58"
+                  y1="2"
+                  y2="14"
+                  fill="none"
+                  stroke="#010101"
+                  stroke-miterlimit="10"
+                  stroke-width="4"
+                />
+                <line
+                  x1="58"
+                  x2="58"
+                  y1="34"
+                  y2="62"
+                  fill="none"
+                  stroke="#010101"
+                  stroke-miterlimit="10"
+                  stroke-width="4"
+                />
+                <circle cx="58" cy="24" r="6" fill="#010101" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="installed-program">
+          <div class="d-flex justify-content-start">
+            <div class="items" *ngFor="let image of images" placement="bottom">
+              <img
+                src="../../../assets/taskbar/{{ image.name }}.png"
+                alt="{{ image.alt }}"
+                placement="bottom"
+                ngbTooltip="{{ image.tooltip }}"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="end">
+        <div class="d-flex">
+          <ng-template #show>
+            <div class="ng-template">Show hidden icons</div>
+          </ng-template>
+          <div class="dropdown">
+            <div
+              class="hidden-icons features"
+              placement="bottom"
+              [ngbTooltip]="show"
+              id="show-hidden-items"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <svg
+                width="524px"
+                height="524px"
+                viewBox="0 -6 524 524"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M64 191L98 157 262 320 426 157 460 191 262 387 64 191Z"
+                />
+              </svg>
+            </div>
+            <div class="dropdown-menu" aria-labelledby="show-hidden-items">
+              <div class="row">
+                <div
+                  class="icon-container col-4"
+                  *ngFor="let hiddenItem of hiddenItems"
+                  title="{{ hiddenItem.tooltip }}"
+                >
+                  <img
+                    class="hidden-icon dropdown-item"
+                    src="../../../assets/taskbar/dropdowns/{{
+                      hiddenItem.name
+                    }}.png"
+                    alt="{{ hiddenItem.alt }}"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <ng-template #battery>
+            <div class="ng-template">Fully charged (100%)</div>
+          </ng-template>
+          <div class="features" placement="bottom" [ngbTooltip]="battery">
+            <svg
+              class="battery"
+              width="76px"
+              height="76px"
+              viewBox="0 0 76 76"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              version="1.1"
+              baseProfile="full"
+              enable-background="new 0 0 76.00 76.00"
+              xml:space="preserve"
+            >
+              <path
+                fill-opacity="1"
+                stroke-linejoin="round"
+                d="M 40,38L 40,48L 36,48L 36,38L 34,38C 32.3431,38 31,36.6569 31,35L 31,28L 34,28L 34,24L 37,24L 37,28L 39,28L 39,24L 42,24L 42,28L 45,28L 45,35C 45,36.6569 43.6568,38 42,38L 40,38 Z M 59,34L 59,42L 56,42L 56,48L 41,48L 41,44L 52,44L 52,32L 46,32L 46,28L 56,28L 56,34L 59,34 Z M 24,32L 24,44L 35,44L 35,48L 20,48L 20,28L 30,28L 30,32L 24,32 Z "
+              />
+            </svg>
+          </div>
+          <ng-template #wifi>
+            <div class="ng-template d-flex flex-column align-items-start">
+              <div>Home Wifi :)</div>
+              <div>Internet access</div>
+            </div>
+          </ng-template>
+          <div class="features" placement="bottom" [ngbTooltip]="wifi">
+            <svg
+              version="1.1"
+              id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 494.45 494.45"
+              style="enable-background: new 0 0 494.45 494.45"
+              xml:space="preserve"
+            >
+              <g>
+                <g>
+                  <g>
+                    <path
+                      d="M395.225,277.325c-6.8,0-13.5-2.6-18.7-7.8c-71.4-71.3-187.4-71.3-258.8,0c-10.3,10.3-27.1,10.3-37.4,0
+				s-10.3-27.1,0-37.4c92-92,241.6-92,333.6,0c10.3,10.3,10.3,27.1,0,37.4C408.725,274.725,401.925,277.325,395.225,277.325z"
+                    />
+                  </g>
+                  <g>
+                    <path
+                      d="M323.625,348.825c-6.8,0-13.5-2.6-18.7-7.8c-15.4-15.4-36-23.9-57.8-23.9s-42.4,8.5-57.8,23.9
+				c-10.3,10.3-27.1,10.3-37.4,0c-10.3-10.3-10.3-27.1,0-37.4c25.4-25.4,59.2-39.4,95.2-39.4s69.8,14,95.2,39.5
+				c10.3,10.3,10.3,27.1,0,37.4C337.225,346.225,330.425,348.825,323.625,348.825z"
+                    />
+                  </g>
+                  <g>
+                    <circle cx="247.125" cy="398.925" r="35.3" />
+                  </g>
+                  <g>
+                    <path
+                      d="M467.925,204.625c-6.8,0-13.5-2.6-18.7-7.8c-111.5-111.4-292.7-111.4-404.1,0c-10.3,10.3-27.1,10.3-37.4,0
+				s-10.3-27.1,0-37.4c64-64,149-99.2,239.5-99.2s175.5,35.2,239.5,99.2c10.3,10.3,10.3,27.1,0,37.4
+				C481.425,202.025,474.625,204.625,467.925,204.625z"
+                    />
+                  </g>
+                </g>
+              </g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+            </svg>
+          </div>
+          <ng-template #volume>
+            <div class="ng-template">Speaker: 100%</div>
+          </ng-template>
+          <div class="features" placement="bottom" [ngbTooltip]="volume">
+            <svg
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 1000 1000"
+              enable-background="new 0 0 1000 1000"
+              xml:space="preserve"
+            >
+              <metadata>
+                Svg Vector Icons : http://www.onlinewebfonts.com/icon
+              </metadata>
+              <g>
+                <path
+                  d="M481.8,80.4L215.9,319.8H10.1v185.3l-0.1,0.1l0.1,0.1v183.4H217l264.8,234.7l0-234.7h0.1V319.8h-0.1L481.8,80.4L481.8,80.4z M445.6,647.7L445.6,647.7l-0.1,41v150.5L239.4,656.4l-9.9-8.7H217H46.4V505.3v-0.2V360.8h169.5h12.7l9.9-8.9l207-186.4v154.3l0.1,41V647.7z"
+                />
+                <path
+                  d="M566.6,293.5c39.5,59.4,60.3,130.2,60.3,204.8c0,76.1-21.7,148.1-62.7,208.2l28.8,25c45.9-67.4,70.2-148,70.2-233.2c0-83.5-23.4-162.8-67.6-229.4L566.6,293.5z"
+                />
+                <path
+                  d="M712.8,144.9l-28,26.1c68.2,93.2,105.7,211.4,105.7,332.6c0,119.8-34.9,232.4-100.9,325.8L718,855c71.2-100.7,108.8-222.2,108.8-351.4C826.8,372.9,786.3,245.5,712.8,144.9z"
+                />
+                <path
+                  d="M825.8,11.9l-27.2,27.1c100.1,128.4,155.2,293.4,155.2,464.8c0,167.9-53.2,330.5-149.8,457.7l27.5,26.7C933.7,853.5,990,681.4,990,503.8C990,322.4,931.7,147.7,825.8,11.9z"
+                />
+              </g>
+            </svg>
+          </div>
+          <ng-template #eng>
+            <div class="ng-template d-flex flex-column align-items-start">
+              <div class="mb-0">English (Canada)</div>
+              <div class="mb-0">US keyboard</div>
+              <br />
+              <div class="mb-0">To switch input methods, press</div>
+              <div class="mb-0">Windows key+Space.</div>
+            </div>
+          </ng-template>
+          <div class="features" [ngbTooltip]="eng">
+            <div class="lang">ENG</div>
+          </div>
+          <ng-template #time>
+            <div class="ng-template d-flex flex-column align-items-start">
+              {{ currentTime.dateTime }}
+            </div>
+          </ng-template>
+          <div class="features" placement="bottom" [ngbTooltip]="time">
+            <div class="current-time">
+              {{ currentTime.timeAMPM }}
+            </div>
+          </div>
+          <ng-template #notification>
+            <div class="ng-template">Msgs</div>
+          </ng-template>
+          <div
+            class="features notification"
+            placement="bottom"
+            [ngbTooltip]="notification"
+          >
+            <svg
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 458 458"
+              style="enable-background: new 0 0 458 458"
+              xml:space="preserve"
+            >
+              <g>
+                <g>
+                  <path
+                    d="M428,41.534H30c-16.569,0-30,13.431-30,30v252c0,16.568,13.432,30,30,30h132.1l43.942,52.243
+			c5.7,6.777,14.103,10.69,22.959,10.69c8.856,0,17.258-3.912,22.959-10.69l43.942-52.243H428c16.568,0,30-13.432,30-30v-252
+			C458,54.965,444.568,41.534,428,41.534z M323.916,281.534H82.854c-8.284,0-15-6.716-15-15s6.716-15,15-15h241.062
+			c8.284,0,15,6.716,15,15S332.2,281.534,323.916,281.534z M67.854,198.755c0-8.284,6.716-15,15-15h185.103c8.284,0,15,6.716,15,15
+			s-6.716,15-15,15H82.854C74.57,213.755,67.854,207.039,67.854,198.755z M375.146,145.974H82.854c-8.284,0-15-6.716-15-15
+			s6.716-15,15-15h292.291c8.284,0,15,6.716,15,15C390.146,139.258,383.43,145.974,375.146,145.974z"
+                  />
+                </g>
+              </g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+            </svg>
+          </div>
+          <div class="show-desktop"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wallpaper position-absolute">
+    <img
+      class="background"
+      src="../../../assets/background/background.jpg"
+      alt="Desktop Wallpaper"
+      (contextmenu)="onRightClickDesktop($event)"
+      (click)="onClickDesktopOrFocusLost()"
+    />
+  </div>
+  <div class="desktop position-absolute" [ngClass]="[refreshClicked]">
+    <div
+      class="icons d-flex flex-column align-items-start flex-wrap"
+      (click)="onClickDesktopOrFocusLost()"
+    >
+      <div
+        tabindex="0"
+        class="icon"
+        *ngFor="let icon of icons"
+        (contextmenu)="onClickDesktopIcons($event)"
+      >
+        <figure class="d-flex flex-column align-items-center">
+          <img
+            src="../../../assets/desktop/{{ icon.name }}.png"
+            alt="{{ icon.alt }}"
+            data-toggle="tooltip"
+            title="{{ icon.tooltip }}"
+          />
+          <figcaption class="d-flex justify-content-center">
+            {{ icon.displayName }}
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>

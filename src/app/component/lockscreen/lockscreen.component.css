@@ -1,0 +1,175 @@
+div,
+img svg {
+  user-select: none;
+}
+div:hover {
+  cursor: default;
+}
+.img-container {
+  width: 100%;
+  height: 100vh;
+}
+img.bg {
+  animation: enlarge 0.3s ease forwards;
+}
+
+@keyframes enlarge {
+  0% {
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+  }
+  100% {
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+  }
+}
+
+.content {
+  padding: 45px;
+  width: 100%;
+  height: 100vh;
+}
+
+svg {
+  height: 25px;
+  width: 25px;
+  fill: white;
+}
+
+svg.hearts {
+  padding-right: 5px;
+}
+
+.element {
+  display: flex;
+  color: white;
+  width: 420px;
+  animation: fade 1.5s ease forwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.element.start.center {
+  margin-left: 40%;
+  margin-top: 11%;
+}
+
+.icon {
+  fill: white;
+  padding: 8px;
+  margin: 9px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+}
+
+.element.start {
+  height: 80px;
+}
+.element.end {
+  height: 80px;
+}
+
+.info {
+  width: 375px;
+}
+
+.element.start:hover .icon {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hidden {
+  color: rgb(178, 180, 183);
+  display: none;
+}
+
+.element.start:hover .info {
+  height: 190px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.element.start:hover .info > .hidden {
+  display: contents;
+}
+
+.element.end:hover .icon {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hidden-credits {
+  display: none;
+}
+
+.element.end:hover .info {
+  height: 240px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.element.end:hover .info > .hidden-credits {
+  display: contents;
+}
+
+.caption {
+  font-size: 12px;
+  color: rgb(153, 153, 153);
+}
+
+.heart:hover {
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+.dropdown-divider {
+  width: 80%;
+  margin-left: 5px;
+  background: rgb(153, 153, 153);
+  height: 2px;
+}
+.credits:hover,
+.heart:hover {
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  width: 90%;
+}
+
+.live-info {
+  bottom: 5%;
+  width: 94%;
+  position: absolute;
+}
+
+.date-time {
+  margin-top: 20px;
+}
+.date {
+  font-size: 48px;
+  font-weight: 200;
+}
+.time {
+  font-size: 112px;
+  font-weight: 200;
+}
+
+.icon.wifi,
+.battery {
+  background: rgba(255, 255, 255, 0);
+}
+
+svg.battery {
+  height: 60px;
+  width: 50px;
+}

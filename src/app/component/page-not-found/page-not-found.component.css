@@ -1,0 +1,35 @@
+.emoji{
+    font-size: 120px;
+}
+
+.info{
+    font-size: 28px;
+    font-weight: 200;
+    margin-bottom: 2rem;
+}
+
+.info > p, .profile-info > p, .profile-info > .error-info > p{
+    margin-bottom: 0;
+}
+
+.qr-code{
+    margin-right: 1rem;
+}
+
+.error-info{
+    margin-top: 4rem;
+}
+
+.bg-primary{
+    animation: fade 0.2s ease-in forwards;
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+

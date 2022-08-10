@@ -1,0 +1,108 @@
+Requirements:
+1. Reference images and icons
+
+    -Locksreen
+        -bg
+        -internet icon
+        -wifi icon
+        -camera icon
+
+    -Sign-in
+        -bg
+        -language(text)
+        -ease of access icon
+        -internet icon
+        -power icon    
+
+    -Desktop
+        -bg
+        -application shortcuts 
+        -->arrays with the following attributes
+        -->icon names should be same as in the array for ease of access
+           {name:,tooltip:}
+            -recycle bin
+            -brave
+            -intelli j
+            -team viewer
+            -discord
+            -teams
+            -command prompt
+            -postman
+            -word files
+            -notepad++ files
+    
+    -Taskbar
+        -->arrays with the following attributes
+        -->icon names should be same as in the array for ease of access
+            {name:,hover:}
+            -start icon
+            -search
+            -cortana
+            -task view
+            -snipping tool
+            -notepad
+            -explorer
+            -outlook
+            -brave
+            -vs code
+            -zoom
+            -intelli j
+        -Dropdowns
+            -bluetooth
+            -dolby
+            -windows security
+            -intel
+            -nvidia
+        -Keyboard
+        -Time
+        -Notification
+
+
+    -Right-click Feature
+        -Git icon
+        -vs code icon
+        -intel icon
+        -nvidia icon
+        -display icon
+        -personalize icon
+    
+2. Color
+    Hover icons:
+    Desktop        
+    Taskbar
+
+3. Size in pixel
+
+    3.1 Lockscreen:
+            Width: 1920px, Height: 1080px
+            inner padding: 45px all
+
+            Watch Font size : 112px
+            Day information : 50px
+            
+            Web Circle : 40px 40px
+            margin: 10px
+
+            Icons:
+            web, heart : 20px 20px padding: 10px
+            wifi, battery : 25px 25px
+
+            wifi and battery : padding : 43px
+
+
+
+Directive:
+    Desktop:
+        ClickOnIcons
+
+Service:
+
+    Time lockscreen and taskbar
+    Desktop items
+    Task Bar items
+
+
+Implementation:
+
+--> Icons and images collected
+--> Colors provided in app.component.css
