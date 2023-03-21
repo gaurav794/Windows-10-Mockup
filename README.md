@@ -1,6 +1,6 @@
 # Windows10Mock
 
-This project was developed with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
+URL: https://win10mockstatic.z22.web.core.windows.net/
 
 Accomplishments, Responsibilities and Tasks:
 
